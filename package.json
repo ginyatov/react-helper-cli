@@ -1,0 +1,30 @@
+{
+  "name": "@ginyatov/reacttshelper",
+  "version": "0.0.1",
+  "description": "CLI helpers for React TypeScript",
+  "main": "src/index.ts",
+  "engines": {
+    "node": ">12"
+  },
+  "scripts": {
+    "start": "node -r dotenv/config ./dist/index.js"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "Ali Ginyatov <npm@ginyatov.com>",
+  "repository": "gitHub:ginyatov/react-typescript-cli-helper",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0"
+  },
+  "bugs": {
+    "url": "https://ginyatov.com/",
+    "email": "npm@ginyatov.com"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3",
+    "prettier": "^2.4.1"
+  }
+}
