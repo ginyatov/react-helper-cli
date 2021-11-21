@@ -3,6 +3,7 @@ import { ENTITIES_PATH } from "../index.js";
 import { writeFile } from "../../../helpers/helpers.js";
 
 const createTextSaga = (name: string) => `
+import { all, takeLatest } from 'redux-saga/effects'
 import ${name}ActionCreators from './reducer'
 
 export function* sagaTest({ payload }: ReturnType<typeof ${name}ActionCreators.sagaTest>) {

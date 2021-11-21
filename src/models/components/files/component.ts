@@ -1,9 +1,7 @@
-import { setFirstLetterBig, writeFile } from "../../../helpers/helpers.js";
+import { writeFile } from "../../../helpers/helpers.js";
 import path from "path";
 
 const createComponentText = (name: string, hasStyle: boolean) => {
-  const firstLetterBig = setFirstLetterBig(name);
-
   const includeStyle = hasStyle
     ? `import css from './${name}.module.scss';`
     : "";
@@ -12,8 +10,8 @@ const createComponentText = (name: string, hasStyle: boolean) => {
 import { FC } from 'react';
 ${includeStyle}
 
-type ${firstLetterBig}Props = {};
-const ${firstLetterBig}: FC<${firstLetterBig}Props> = (props) => {
+type ${name}Props = {};
+const ${name}: FC<${name}Props> = (props) => {
   return (
     <div>
 
@@ -21,7 +19,7 @@ const ${firstLetterBig}: FC<${firstLetterBig}Props> = (props) => {
   );
 };
 
-export default ${firstLetterBig};
+export default ${name};
 `;
 };
 

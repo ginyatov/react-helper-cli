@@ -1,6 +1,7 @@
 import fs from "fs";
 import inquirer from "inquirer";
 import { createComponent } from "./files/component.js";
+import { setFirstLetterBig } from "../../helpers/helpers.js";
 
 const questionsDefault = [
   {
@@ -8,7 +9,7 @@ const questionsDefault = [
     name: "componentName",
     message: "What name component?",
     filter(val: string) {
-      return val.toLowerCase();
+      return setFirstLetterBig(val);
     },
     validate(value: string) {
       if (!value.trim().length) {
@@ -45,8 +46,6 @@ const questionsDefault = [
 
 const componentsHandler = async (pathToFile?: string) => {
   let questions = pathToFile ? questionsDefault.slice(0, -1) : questionsDefault;
-
-  console.log(questions);
 
   return inquirer.prompt(questions).then(async (answers) => {
     const componentName = answers.componentName;

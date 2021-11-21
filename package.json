@@ -1,6 +1,6 @@
 {
-  "name": "@ginyatov/reacttshelper",
-  "version": "0.0.1",
+  "name": "react-ts-helper",
+  "version": "0.0.2",
   "description": "CLI helpers for React TypeScript",
   "main": "src/index.ts",
   "engines": {

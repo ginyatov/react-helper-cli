@@ -1,10 +1,8 @@
 import fs from "fs";
 import chalk from "chalk";
 
-export const setFirstLetterBig = (name: string) => {
-  console.log("name", name);
-  return name[0].toUpperCase() + name.slice(1);
-};
+export const setFirstLetterBig = (name: string) =>
+  name[0].toUpperCase() + name.slice(1);
 
 export const writeFile = (
   pathToFile: string,
