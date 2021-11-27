@@ -1,6 +1,6 @@
-import { setFirstLetterBig, writeFile } from "../../../helpers/helpers.js";
+import { setFirstLetterBig, writeFile } from "@helpers/helpers";
 import path from "path";
-import { ENTITIES_PATH } from "../index.js";
+import { ENTITIES_PATH } from "../index";
 
 const createTextSelector = (name: string) => {
   const firstLetterBig = setFirstLetterBig(name);

@@ -1,4 +1,4 @@
-import { writeFile } from "../../../helpers/helpers.js";
+import { writeFile } from "@helpers/helpers";
 import path from "path";
 
 const createComponentText = (name: string, hasStyle: boolean) => {
@@ -7,11 +7,13 @@ const createComponentText = (name: string, hasStyle: boolean) => {
     : "";
 
   return `
-import { FC } from 'react';
+import { ReactNode } from 'react';
 ${includeStyle}
 
-type ${name}Props = {};
-const ${name}: FC<${name}Props> = (props) => {
+type ${name}Props = {
+  children?: ReactNode
+};
+const ${name} = (props: ${name}Props) => {
   return (
     <div>
 

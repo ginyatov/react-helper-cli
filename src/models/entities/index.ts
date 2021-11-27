@@ -1,10 +1,10 @@
 import inquirer from "inquirer";
 import fs from "fs";
 import path from "path";
-import { createSaga } from "./files/saga.js";
-import { createReducer } from "./files/reducer.js";
-import { createSelector } from "./files/selector.js";
-import componentsHandler from "../components/index.js";
+import componentsHandler from "@models/components";
+import { createSelector } from "./files/selector";
+import { createReducer } from "./files/reducer";
+import { createSaga } from "./files/saga";
 
 export const ENTITIES_PATH = process.env.ENTITIES_PATH ?? "/entities/";
 
@@ -87,7 +87,7 @@ const entitiesHandle = async () => {
       const componentsPath = path.join(entitiesPath, "/components");
       fs.mkdirSync(componentsPath);
 
-      await componentsHandler(componentsPath);
+      // await componentsHandler(componentsPath);
     }
 
     if (selectedSaga || selectedReducer || selectedSelector) {

@@ -1,6 +1,6 @@
 import path from "path";
-import { ENTITIES_PATH } from "../index.js";
-import { setFirstLetterBig, writeFile } from "../../../helpers/helpers.js";
+import { ENTITIES_PATH } from "../index";
+import { setFirstLetterBig, writeFile } from "@helpers/helpers";
 
 const createTextReducer = (name: string, selectedSaga: boolean) => {
   const firstLetterBig = setFirstLetterBig(name);

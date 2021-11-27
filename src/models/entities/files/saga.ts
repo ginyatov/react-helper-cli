@@ -1,6 +1,6 @@
 import path from "path";
-import { ENTITIES_PATH } from "../index.js";
-import { writeFile } from "../../../helpers/helpers.js";
+import { ENTITIES_PATH } from "../index";
+import { writeFile } from "@helpers/helpers";
 
 const createTextSaga = (name: string) => `
 import { all, takeLatest } from 'redux-saga/effects'
