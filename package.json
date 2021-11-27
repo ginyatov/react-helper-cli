@@ -14,7 +14,7 @@
   "keywords": [],
   "type": "module",
   "author": "Ali Ginyatov <npm@ginyatov.com>",
-  "repository": "gitHub:ginyatov/react-typescript-cli-helper",
+  "repository": "gitHub:ginyatov/react-helper-cli",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
