@@ -1,21 +1,38 @@
 {
   "name": "react-helper-cli",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "CLI helpers for React",
-  "main": "src/index.ts",
-  "engines": {
-    "node": ">12"
+  "author": "Ali Ginyatov <npm@ginyatov.com>",
+  "main": "bin/react-helper",
+  "license": "MIT",
+  "bin": {
+    "react-helper": "bin/react-helper"
   },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "keywords": [
+    "cli",
+    "react",
+    "build-tools",
+    "react-helper-cli"
+  ],
+  "engines": {
+    "node": ">=10.x",
+    "npm": ">= 6.x"
+  },
+  "browserslist": [
+    "maintained node versions"
+  ],
   "scripts": {
     "start": "node -r dotenv/config ./dist/index.js",
     "build": "tsc --build",
     "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts"
   },
-  "keywords": [],
   "type": "module",
-  "author": "Ali Ginyatov <npm@ginyatov.com>",
-  "repository": "gitHub:ginyatov/react-helper-cli",
-  "license": "ISC",
+  "repository": "https://github.com/ginyatov/react-helper-cli",
   "dependencies": {
     "chalk": "^4.1.2",
     "dotenv": "^10.0.0",
